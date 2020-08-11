@@ -1,0 +1,80 @@
+nav a img {
+    max-height: 30px;
+    position: relative;
+    top: -2px;
+    margin: 0 5px 0 10px;
+}
+nav {
+    background-color: #1f4d51;
+}
+img.header_image{
+    max-width: 8em;
+}
+.jumbotron{
+    background-color: #1f4d51;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.about{
+    grid-area: about;
+}
+.visi_text{
+    grid-area: visi_text;
+}
+.visi_foto{
+    grid-area: visi_foto;
+}
+.misi{
+    grid-area: misi;
+    position: relative;
+    left: -20px;
+}
+.maskot_foto{
+    grid-area: maskot_foto;
+}
+.maskot_text{
+    grid-area: maskot_text;
+}
+.isi{
+    background-color: #fafafa;
+    display: grid;
+    grid-template-areas:
+        "about about" 
+        "visi_foto visi_text"
+        "misi misi"
+        "maskot_text maskot_foto";
+    gap: 3em;
+}
+footer{
+    display: grid;
+    grid-template-areas: "logo pre-events events";
+}
+.logo{
+    grid-area: logo;
+}
+.pre-events{
+    grid-area: pre-events;
+}
+.events{
+    grid-area: events;
+}
+
+@media(max-width: 992px){
+    .isi{
+        grid-template-areas:
+            "about" 
+            "visi_foto"
+            "visi_text"
+            "misi"
+            "maskot_foto"
+            "maskot_text";
+    }
+    footer{
+        grid-template-areas: 
+            "logo"
+            "pre-events"
+            "events";
+    }
+}
